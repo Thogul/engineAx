@@ -2,15 +2,11 @@ import { movementComponent } from "../components/movementComponent.js"
 import { combatComponent } from "../components/combatComponent.js"
 
 export class EnemyEntity {
-    hp
-    movement
-    combat
+    //hp
+    //movement
+    //combat
     mesh
     constructor(ctx) {
-        this.hp = 3;
-        this.movement = new movementComponent();
-        this.movement.maxSpeed = 0.1;
-        this.combat = new combatComponent();
 
         //object init goes here....
         const geometry = new THREE.BoxGeometry( 1, 1, 1 );

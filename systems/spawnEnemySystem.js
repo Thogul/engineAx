@@ -1,23 +1,20 @@
 import { EnemyEntity } from "../entities/enemy.js";
 
 export function spawnEnemySystem(ctx) {
-    //spawn an enemy, based of some tickrate or something...
+    //spawn an enemy, might want to base spawn time on tickrate like every 30 ticks
     if (ctx.enemies.length >= ctx.maxEnemies) return; //skip if we can't spawn
-    if (ctx.ticks % 1 == 0) {
+    if (ctx.ticks % 20 == 0) {
         //Spawn once every 20 ticks aka every sec
-        let spawnPoint = new THREE.Vector3(1, 0, 0);
-        let axisVec = new THREE.Vector3(0, 0, 1);
-        let angle = 2*Math.PI*Math.random();
-        spawnPoint.applyAxisAngle(axisVec, angle);
-        spawnPoint.multiplyScalar(15); //since vector is 1 long, decide distance by multiplying the desired length
-        spawnPoint.add(ctx.player.movement.position);//offset to be around where the player is
+        // init a new enemy, remember to send in global context:
         let enemy = new EnemyEntity(ctx);
-        enemy.movement.position.copy(spawnPoint);
-        let ranged = Math.random() < 0.19; //chance enemy is ranged
-        if(ranged) {
-            enemy.movement.maxSpeed = 0.2;
-        }
-        enemy.combat.ranged = ranged;
+
+        // make a spawn point(could be x,y or a vector)
+        
+
+        //after combat is made, maybe enemy could have chance of being ranged?
+        
+        
+        //add enemy to the enemies list in global context
         ctx.enemies.push(enemy);
     }
 }

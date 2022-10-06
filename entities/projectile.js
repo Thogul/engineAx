@@ -2,14 +2,11 @@ import { combatComponent } from "../components/combatComponent.js";
 import { movementComponent } from "../components/movementComponent.js";
 
 export class Projectile {
-    movement
-    lifetime = 20;
-    combat
+    //movement
+    //lifetime = 20;
+    //combat
+    mesh
     constructor(ctx) {
-        this.movement = new movementComponent();
-        this.movement.maxSpeed = 2;
-        this.combat = new combatComponent();
-        this.combat.damage = 5;
 
         //three.js stuff
         const geometry = new THREE.BoxGeometry( 0.5, 0.5, 0.5 );

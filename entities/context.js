@@ -34,6 +34,5 @@ export class Context {
 
         //game inits
         this.player = new PlayerEntity(this);
-        this.player.combat.attackCd = 3;
     }
 }

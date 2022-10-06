@@ -3,8 +3,11 @@ export function graphicSystem(ctx) {
 
     //update meshes with the correct position
     ctx.player.mesh.position.copy(ctx.player.movement.position);
+    /*
+    // Set the color of the player based on immunity
     if(ctx.player.combat.immunity > 0) {ctx.player.mesh.material.color.setHex(0xffffff);}
     else {ctx.player.mesh.material.color.setHex(0x00ff00);}
+    */
 
     for(let enemy of ctx.enemies) {
         enemy.mesh.position.copy(enemy.movement.position);
