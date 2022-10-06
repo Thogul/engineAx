@@ -13,7 +13,7 @@ export function spawnEnemySystem(ctx) {
         spawnPoint.add(ctx.player.movement.position);//offset to be around where the player is
         let enemy = new EnemyEntity(ctx);
         enemy.movement.position.copy(spawnPoint);
-        let ranged = Math.random() < 0.19; //let enemy be ranged
+        let ranged = Math.random() < 0.19; //chance enemy is ranged
         if(ranged) {
             enemy.movement.maxSpeed = 0.2;
         }
