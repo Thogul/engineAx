@@ -11,7 +11,7 @@ export function spawnEnemySystem(ctx) {
         // make a spawn point(could be x,y or a vector)
         
 
-        //after combat is made, maybe enemy could have chance of being ranged?
+        //after combatcomponent is made, maybe enemy could have chance of being ranged?
         
         
         //add enemy to the enemies list in global context
